@@ -42,7 +42,7 @@ Este repositorio contiene las APIs y la aplicación móvil del proyecto "App Ges
 Para clonar el repositorio en tu máquina local, ejecuta el siguiente comando en tu terminal:
 
 ```bash
-git clone https://github.com/tu_usuario/nombre_repositorio.git
+git clone https://github.com/Chvrry1/App-Gestion.git
 ```
 
 ### Realizar cambios y hacer commit
