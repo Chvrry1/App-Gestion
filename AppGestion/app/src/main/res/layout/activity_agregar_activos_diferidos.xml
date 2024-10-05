@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agregar_activos_diferidos"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activos.AgregarActivosDiferidos">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@color/white">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/devolver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_chevron_left_24">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Agregar Activos Diferidos"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_below="@+id/encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/black">
+        </TextView>
+        <EditText
+            android:id="@+id/descripcion_activo_diferido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:background="@drawable/style_round_editext"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:hint="descripcion del activo diferido">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valor de pago"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/black">
+        </TextView>
+        <EditText
+            android:id="@+id/valor_pago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:background="@drawable/style_round_editext"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:hint="valor de pago anticipado">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vigencia en años"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/black">
+        </TextView>
+        <EditText
+            android:id="@+id/vigencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:background="@drawable/style_round_editext"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:hint="cantidad de años">
+        </EditText>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_agregar_ActivoD"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_round_button"
+                android:backgroundTint="@color/blue_700"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="30dp"
+                android:text="Agregar"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_round_button"
+                    android:backgroundTint="@color/blue_700"
+                    android:visibility="gone"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Guardar"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_editar_activoD"
+                    android:drawableTint="@color/white"
+                    android:textAllCaps="false"/>
+
+
+                <ImageView
+                    android:id="@+id/btn_eliminar_activoD"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/baseline_delete_outline_24"
+                    app:tint="@color/red"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

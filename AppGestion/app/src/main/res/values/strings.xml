@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AppGestion</string>
+    <string name="title_gastos">Gestion de gastos</string>
+    <string name="title_activos">Activos y pagos</string>
+    <string name="title_inventario">Inventario</string>
+    <string name="title_inversion">Inversion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_agregar_gasto">AgregarGasto</string>
+
+
+    <string-array name="prioridad">
+        <item>Necesario</item>
+        <item>No necesario</item>
+    </string-array>
+
+</resources>

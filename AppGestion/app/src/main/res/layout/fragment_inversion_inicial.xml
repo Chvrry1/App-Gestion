@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.inversion.InversionInicialFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/titulo_capital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capital disponible"
+                android:textSize="25dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black">
+
+            </TextView>
+            <ImageView
+                android:id="@+id/agregar_materiaP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_control_point_24"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/titulo_capital"
+                app:tint="@color/blue">
+
+            </ImageView>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 0"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="15dp"
+            android:textColor="@color/black">
+
+        </TextView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:id="@+id/valores"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:layout_margin="10dp"
+                    android:useDefaultMargins="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_width="0dp"
+                        app:cardCornerRadius="10dp"
+                        android:backgroundTint="@color/blue"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/blue"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:paddingVertical="10dp"
+                                android:text="Activos fijos">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/total_activo_fijo"
+                                android:textAlignment="center"
+                                android:textSize="17sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:text="$ 0">
+                            </TextView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_columnWeight="1"
+                        android:layout_width="0dp"
+                        android:backgroundTint="@color/blue"
+                        app:cardCornerRadius="10dp"
+
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp"
+                                android:background="@color/blue"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:text="Activos diferidos">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/pago_anticipado"
+                                android:textSize="17dp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:text="$ 0">
+                            </TextView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/capital_costos_indirectos"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:hint="No hay datos">
+                </TextView>
+                <TextView
+                    android:id="@+id/capital_mano_obra"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:hint="No hay datos">
+                </TextView>
+                <TextView
+                    android:id="@+id/capital_materia_prima"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:hint="No hay datos">
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:foregroundGravity="center_vertical"
+                            android:weightSum="2"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="start"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:text="Capital de trabajo Mensual">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/capital_trabajo_mensual"
+                                android:textSize="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/blue"
+                                android:text="$ 0">
+                            </TextView>
+
+
+                        </LinearLayout>}
+
+                        <TextView
+                            android:id="@+id/mostrar_datos"
+                            android:textSize="17dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:paddingVertical="20dp"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:hint="No hay datos">
+                        </TextView>
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/grefico_mensual"
+                            android:layout_width="match_parent"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_height="300dp">
+
+                        </com.github.mikephil.charting.charts.BarChart>
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:foregroundGravity="center_vertical"
+                            android:weightSum="2"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:textSize="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="start"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:text="Capital de trabajo trimestral">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/capital_trabajo_trimestral"
+                                android:textSize="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="20dp"
+                                android:background="@color/white"
+                                android:textColor="@color/blue"
+                                android:text="$ 0">
+                            </TextView>
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/mostrar_datos_trimestral"
+                            android:textSize="17dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:paddingVertical="20dp"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:hint="No hay datos">
+                        </TextView>
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/grafico_trimestral"
+                            android:layout_width="match_parent"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="15dp"
+                            android:layout_height="300dp">
+
+                        </com.github.mikephil.charting.charts.BarChart>
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:cardCornerRadius="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/titulo_capital_trabajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Capital de trabajo"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="20sp"
+                                android:textColor="@color/black">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/capital_trabajo"
+                                android:layout_toEndOf="@+id/titulo_capital_trabajo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:hint="$ 0"
+                                android:textAlignment="textEnd"
+                                android:textSize="20sp"
+                                android:textColor="@color/blue">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/titulo_capital_requerido"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Capital requerido"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="20sp"
+                                android:textColor="@color/black">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/capital_requerido"
+                                android:layout_toEndOf="@id/titulo_capital_requerido"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:hint="$ 0"
+                                android:textAlignment="textEnd"
+                                android:textSize="20sp"
+                                android:textColor="@color/blue">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/titulo_inversion_inicial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Inversion incial"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="20sp"
+                                android:textColor="@color/black">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/inversion_inicial"
+                                android:layout_toEndOf="@id/titulo_inversion_inicial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:hint="$ 0"
+                                android:textAlignment="textEnd"
+                                android:textSize="20sp"
+                                android:textColor="@color/blue">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/titulo_inversion_requerida"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Inversion requerida"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="20sp"
+                                android:textColor="@color/black">
+
+                            </TextView>
+                            <TextView
+                                android:id="@+id/inversion_requerida"
+                                android:layout_toEndOf="@id/titulo_inversion_requerida"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="textEnd"
+                                android:maxLines="1"
+                                android:hint="$ 0"
+                                android:textSize="20sp"
+                                android:textColor="@color/blue">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

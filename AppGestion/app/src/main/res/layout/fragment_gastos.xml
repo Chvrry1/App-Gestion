@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentTop="true"
+    android:background="@color/gray"
+    tools:context=".ui.gastos.GastosFragment">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/datos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_700"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sueldo"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/sueldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="$ 0"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Depreciación"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/depreciacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$ 0"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Amortización"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/amortizacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$ 0"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F3F3"
+        android:layout_below="@id/datos">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gastos_personales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                android:background="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gastos Personales"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+                        <Button
+                            android:id="@+id/btn_gastos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/blue_700"
+                            android:layout_marginEnd="10dp"
+                            android:text="Agregar"
+                            android:layout_alignParentEnd="true"
+                            android:drawableRight="@drawable/add_24"
+                            android:drawableTint="@color/white"
+                            android:textAllCaps="false"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/necesarios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal">
+
+                        </ProgressBar>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Necesarios"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/necesarios"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/noNecesarios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal">
+
+                        </ProgressBar>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No necesarios"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/noNecesarios"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/gasto_sin_datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:text="No hay gastos personales registrados, puede añadirlos pulsando el botón Agregar.">
+
+                    </TextView>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mostrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No hay datos disponibles"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:paddingVertical="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <Button
+                        android:id="@+id/btn_ver_todos_gastos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        app:strokeColor="@color/blue"
+                        android:textColor="@color/blue"
+                        app:cornerRadius="15dp"
+                        android:text="Ver todos"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/gastos_personales"
+                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                app:cardCornerRadius="20dp"
+                android:background="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Costos Indirectos"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+                        <Button
+                            android:id="@+id/btn_costos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/blue_700"
+                            android:layout_marginEnd="10dp"
+                            android:text="Agregar"
+                            android:layout_alignParentEnd="true"
+                            android:drawableRight="@drawable/add_24"
+                            android:drawableTint="@color/white"
+                            android:textAllCaps="false"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_costo_indirecto_total"
+                        android:text="$ 0"
+                        android:gravity="start"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        android:id="@+id/costo_sin_datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:text="No hay gastos personales registrados, puede añadirlos pulsando el botón Agregar.">
+
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mostrar_costos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="50dp"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <Button
+                        android:id="@+id/btn_ver_todos_costos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        app:cornerRadius="15dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:text="Ver todos"
+                        app:strokeColor="@color/blue"
+                        android:textColor="@color/blue"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:drawableTint="@color/white"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
