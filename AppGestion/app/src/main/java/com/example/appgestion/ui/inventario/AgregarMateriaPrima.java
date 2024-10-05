@@ -32,8 +32,8 @@ public class AgregarMateriaPrima extends AppCompatActivity {
     private int id_producto;
     private int index_enviado;
     private String id_materia_prima;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarMP.php";
-    private static final String url2 = "http://192.168.1.5/app_gestion/deleteMP.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarMP.php";
+    private static final String url2 = "http://192.168.0.112/app_gestion/deleteMP.php";
 
 
     @Override

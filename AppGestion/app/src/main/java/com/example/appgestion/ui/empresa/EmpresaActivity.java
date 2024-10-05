@@ -38,7 +38,7 @@ public class EmpresaActivity extends AppCompatActivity {
     private RecyclerView listaEmpresa;
     private AdatadorEmpresas empresaAdapter ;
     private int idUsuario;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarEC.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarEC.php";
 
     @Override
     protected void onResume() {
@@ -74,7 +74,7 @@ public class EmpresaActivity extends AppCompatActivity {
 
     private void obtenerEmpresas(Context context,int idUsuario) {
         // Construir la URL de la solicitud
-        String URL = "http://192.168.1.5/app_gestion/fetchEM.php";
+        String URL = "http://192.168.0.112/app_gestion/fetchEM.php";
 
         // Crear un objeto JSONObject para enviar los datos de la solicitud
         JSONObject postData = new JSONObject();

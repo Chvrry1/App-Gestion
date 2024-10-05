@@ -13,7 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ApiService {
-    private static final String BASE_URL = "http://192.168.1.5/app_gestion/";
+    private static final String BASE_URL = "http://192.168.0.112/app_gestion/";
 
     public void obtenerventas(Context context, int id_empresa, final VolleyCallback callback) {
         String url = BASE_URL + "obtenerVentas.php?id=" + id_empresa;

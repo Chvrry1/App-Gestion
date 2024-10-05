@@ -61,7 +61,7 @@ public class CUsuarioActivity extends AppCompatActivity {
             String result = "";
 
             try {
-                URL url = new URL("http://192.168.1.5/app_gestion/agregarUS.php"); // Reemplaza con la URL de tu script PHP
+                URL url = new URL("http://192.168.0.112/app_gestion/agregarUS.php"); // Reemplaza con la URL de tu script PHP
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setDoOutput(true);

@@ -68,7 +68,7 @@ public class FlujoInversionFragment extends Fragment {
 
 
     private double costoIndirecto,totalEgreso,saldoFinal,materiaprima,manoobra,ventas,capitalRequerido;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarPI.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarPI.php";
 
     private List<Double> inversiones = new ArrayList<>();
     private List<Double> recuperaciones = new ArrayList<>();

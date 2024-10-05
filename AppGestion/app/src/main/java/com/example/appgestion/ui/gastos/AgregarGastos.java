@@ -32,9 +32,9 @@ public class AgregarGastos extends AppCompatActivity {
     private EditText descripcion, costo;
     private Button btn_agregar;
     private int id_empresa;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarGP.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarGP.php";
 
-    private static final String URL2 = "http://192.168.1.5/app_gestion/deleteGP.php";
+    private static final String URL2 = "http://192.168.0.112/app_gestion/deleteGP.php";
 
 
 

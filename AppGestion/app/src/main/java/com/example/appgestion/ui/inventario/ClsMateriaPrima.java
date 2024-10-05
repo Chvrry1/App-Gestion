@@ -40,7 +40,7 @@ public class ClsMateriaPrima {
 
 
     public static void readMP(Context context,String id_producto, final VolleyCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/fetchMP.php?id="+id_producto;
+        String URL ="http://192.168.0.112/app_gestion/fetchMP.php?id="+id_producto;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,
@@ -92,7 +92,7 @@ public class ClsMateriaPrima {
 
 
     public static void readMPyIV(Context context, int id_empresa, final totalMPyIV callback) {
-        String URL = "http://192.168.1.5/app_gestion/iv_mp_pe.php?id=" + id_empresa;
+        String URL = "http://192.168.0.112/app_gestion/iv_mp_pe.php?id=" + id_empresa;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

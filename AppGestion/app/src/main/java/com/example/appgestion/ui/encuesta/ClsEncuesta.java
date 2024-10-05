@@ -29,7 +29,7 @@ public class ClsEncuesta {
     }
     public static void readEC(Context context, int usuario_id, final VolleyCallback callback){
 
-        String URL ="http://192.168.1.5/app_gestion/fetchEC.php?id="+usuario_id;
+        String URL ="http://192.168.0.112/app_gestion/fetchEC.php?id="+usuario_id;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,

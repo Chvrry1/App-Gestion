@@ -38,7 +38,7 @@ public class ClsGastoPersonal {
 
     public static void readGPall(Context context,int id_empresa, final VolleyCallback callback){
 
-        String URL ="http://192.168.1.5/app_gestion/fetchGPALL.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/fetchGPALL.php?id="+id_empresa;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,
@@ -78,7 +78,7 @@ public class ClsGastoPersonal {
 
 
     public static void readGPallIndirectos(Context context,int id_empresa, final VolleyCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/fetchGPALL.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/fetchGPALL.php?id="+id_empresa;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,
@@ -117,7 +117,7 @@ public class ClsGastoPersonal {
     }
 
     public static void totalSueldoEmprendedor(Context context,int id_empresa, final SueldoCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/sueldoEmprendedor.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/sueldoEmprendedor.php?id="+id_empresa;
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,

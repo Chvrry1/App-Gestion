@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void iniciarSesion(String usuario, String contraseña) {
         clsUsuario.IniciarSesion(this, usuario, contraseña, new clsUsuario.UsuarioCallback() {
+
             @Override
             public void onSuccess(int userId, String username) {
                     SharedPreferences sharedPreferences = getSharedPreferences("UsuarioPrefs", Context.MODE_PRIVATE);

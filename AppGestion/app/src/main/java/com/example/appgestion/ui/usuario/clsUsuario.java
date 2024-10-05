@@ -19,7 +19,7 @@ import java.util.List;
 
 public class clsUsuario {
     public static void IniciarSesion(final Context context, final String username, final String password, final UsuarioCallback callback) {
-        String URL = "http://192.168.1.5/app_gestion/validarUser.php";
+        String URL = "http://192.168.0.112/app_gestion/validarUser.php";
 
         // Crear un objeto JSON con los datos de usuario y contraseña
         JSONObject postData = new JSONObject();
@@ -34,6 +34,7 @@ public class clsUsuario {
             @Override
             public void onResponse(JSONObject response) {
                 try {
+
                     if (response.has("mensaje") && response.getString("mensaje").equals("Inicio de sesión exitoso")) {
                         // Obtener el objeto de usuario de la respuesta
                         JSONObject usuarioObject = response.getJSONObject("usuario");
@@ -53,10 +54,11 @@ public class clsUsuario {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 callback.onFailure(error.getMessage());
             }
         });
-
+        System.out.println(jsonObjectRequest);
         // Agregar la solicitud a la cola de solicitudes de Volley
         Volley.newRequestQueue(context).add(jsonObjectRequest);
     }

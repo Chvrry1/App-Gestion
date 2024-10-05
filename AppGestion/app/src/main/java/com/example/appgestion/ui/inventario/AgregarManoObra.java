@@ -31,8 +31,8 @@ public class AgregarManoObra extends AppCompatActivity {
     private EditText descripcion_MO, sueldo_mensual;
     private String idMO="";
     private int id_empresa;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarMO.php";
-    private static final String url2 = "http://192.168.1.5/app_gestion/deleteMO.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarMO.php";
+    private static final String url2 = "http://192.168.0.112/app_gestion/deleteMO.php";
 
 
     @Override

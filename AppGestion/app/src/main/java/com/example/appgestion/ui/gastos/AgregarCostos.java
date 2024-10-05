@@ -30,8 +30,8 @@ public class AgregarCostos extends AppCompatActivity {
     private Button btn_costos;
     private int id_empresa;
 
-    private static final String url = "http://192.168.1.5/app_gestion/agregarCP.php";
-    private static final String url2 = "http://192.168.1.5/app_gestion/deleteCP.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarCP.php";
+    private static final String url2 = "http://192.168.0.112/app_gestion/deleteCP.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

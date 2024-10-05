@@ -33,8 +33,8 @@ public class ClsActivoDiferido {
     }
 
     public static void readAFall(Context context,int id_empresa, final VolleyCallback callback){
-        //"http://192.168.1.5/app_gestion/fetchAD.php?id=1"
-        String URL ="http://192.168.1.5/app_gestion/fetchAD.php?id="+id_empresa;
+        //"http://192.168.0.112/app_gestion/fetchAD.php?id=1"
+        String URL ="http://192.168.0.112/app_gestion/fetchAD.php?id="+id_empresa;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,

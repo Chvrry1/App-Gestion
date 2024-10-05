@@ -30,10 +30,10 @@ public class AgregarActivosFijos extends AppCompatActivity {
     private Button btn_agregarAF;
     private String idAF="";
     private int id_empresa;
-    //"http://192.168.1.5/app_gestion/agregarAF.php"
+    //"http://192.168.0.112/app_gestion/agregarAF.php"
 
-    private static final String url = "http://192.168.1.5/app_gestion/agregarAF.php";
-    private static final String url2 = "http://192.168.1.5/app_gestion/deleteAF.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarAF.php";
+    private static final String url2 = "http://192.168.0.112/app_gestion/deleteAF.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

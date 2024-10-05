@@ -32,7 +32,7 @@ public class ClsManoObra {
     }
 
     public static void readMO(Context context,int id_empresa, final VolleyCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/fetchMO.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/fetchMO.php?id="+id_empresa;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,
@@ -77,7 +77,7 @@ public class ClsManoObra {
     }
 
     public static void readTotalMO(Context context, int id_empresa, final totalMO callback) {
-        String URL = "http://192.168.1.5/app_gestion/totalMO.php?id="+id_empresa;
+        String URL = "http://192.168.0.112/app_gestion/totalMO.php?id="+id_empresa;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

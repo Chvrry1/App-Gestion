@@ -23,7 +23,6 @@ import adaptadores.AdaptadorTabsActivos;
 
 public class ActivosFragment extends Fragment {
 
-
     private TabLayout tabMenu;
     private ViewPager2 tabVista;
     private AdaptadorTabsActivos adaptadorTabsActivos;
@@ -43,17 +42,13 @@ public class ActivosFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
         tabMenu = view.findViewById(R.id.tab_menu);
         tabVista = view.findViewById(R.id.tab_vista);
         botonAgregar = view.findViewById(R.id.btnAgregar);
         adaptadorTabsActivos= new AdaptadorTabsActivos(getActivity().getSupportFragmentManager());
         tabVista.setAdapter(adaptadorTabsActivos);
-        // new TabLayoutMediator(tabMenu,tabVista, (tab, position) -> tab.setText("Item " + (position + 1))).attach();
-
-
-
-
 
         tabMenu.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -72,6 +67,7 @@ public class ActivosFragment extends Fragment {
 
             }
         });
+
         tabVista.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -95,7 +91,6 @@ public class ActivosFragment extends Fragment {
                         startActivity(formActivosD);
                     }
 
-
                 });
 
             }
@@ -106,8 +101,6 @@ public class ActivosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_activos, container, false);
-
-        // Inflate the layout for this fragment
 
     }
 }

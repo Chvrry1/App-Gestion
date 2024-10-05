@@ -71,6 +71,7 @@ public class AdatadorEmpresas extends RecyclerView.Adapter<RecyclerView.ViewHold
                     editor.putString("capital", String.valueOf(empresa.getCapital()));
                     editor.apply();
                     Intent intent = new Intent(mContext, MainActivity.class);
+                    intent.putExtra("empresa_id", empresa.getId());
                     mContext.startActivity(intent);
                 }
             });

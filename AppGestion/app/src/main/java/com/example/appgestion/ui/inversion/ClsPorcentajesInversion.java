@@ -24,7 +24,7 @@ public class ClsPorcentajesInversion {
         this.id = id;
     }
     public static void fetchPI(Context context, int id_empresa, final porcentajes callback) {
-        String URL = "http://192.168.1.5/app_gestion/fetchPI.php?id="+id_empresa;
+        String URL = "http://192.168.0.112/app_gestion/fetchPI.php?id="+id_empresa;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

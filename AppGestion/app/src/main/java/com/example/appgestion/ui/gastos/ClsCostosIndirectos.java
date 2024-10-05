@@ -35,7 +35,7 @@ public class ClsCostosIndirectos {
 
 
     public static void readCIall(Context context,int id_empresa, final VolleyCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/fetchCP.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/fetchCP.php?id="+id_empresa;
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, URL,
@@ -73,7 +73,7 @@ public class ClsCostosIndirectos {
         requestQueue.add(jsonObjectRequest);
     }
     public static void totalCostosIndirectos(Context context,int id_empresa, final TotalCallback callback){
-        String URL ="http://192.168.1.5/app_gestion/totalCostosIndirecto.php?id="+id_empresa;
+        String URL ="http://192.168.0.112/app_gestion/totalCostosIndirecto.php?id="+id_empresa;
 
         // Hacer la solicitud HTTP para obtener el resultado de la suma de los gastos personales
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,

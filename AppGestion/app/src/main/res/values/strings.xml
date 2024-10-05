@@ -7,6 +7,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_agregar_gasto">AgregarGasto</string>
+    <string name="import_excel">Importar archivo excel</string>
 
 
     <string-array name="prioridad">

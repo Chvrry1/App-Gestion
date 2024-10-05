@@ -47,8 +47,8 @@ public class EncuestaActivity extends AppCompatActivity {
     private List<ClsEncuesta>encuestaList = new ArrayList<>();
     private int idUsuario;
     private Button btn_enviar,btn_generar_encuesta_nueva;
-    private static final String url = "http://192.168.1.5/app_gestion/agregarEC.php";
-    private static final String URL2 = "http://192.168.1.5/app_gestion/deleteEC.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarEC.php";
+    private static final String URL2 = "http://192.168.0.112/app_gestion/deleteEC.php";
 
     @Override
     protected void onResume() {

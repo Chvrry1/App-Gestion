@@ -50,10 +50,10 @@ public class AgregarProductos extends AppCompatActivity {
     int proyeccion_venta,id_producto,id_empresa;
     double precio_vent;
 
-    private static final String url = "http://192.168.1.5/app_gestion/agregarIN.php";
-    private static final String url2 = "http://192.168.1.5/app_gestion/agregarMP.php";
+    private static final String url = "http://192.168.0.112/app_gestion/agregarIN.php";
+    private static final String url2 = "http://192.168.0.112/app_gestion/agregarMP.php";
 
-    private static final String url3 = "http://192.168.1.5/app_gestion/deleteIN.php";
+    private static final String url3 = "http://192.168.0.112/app_gestion/deleteIN.php";
 
     @Override
     protected void onStop() {

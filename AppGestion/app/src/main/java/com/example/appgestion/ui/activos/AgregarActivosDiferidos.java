@@ -30,8 +30,8 @@ public class AgregarActivosDiferidos extends AppCompatActivity {
     private Button btn_agregarAD;
     private String idAD="";
     private int id_empresa;
-    private static final String url = "http://192.168.1.5/apis/agregarAD.php";
-    private static final String url2 = "http://192.168.1.5/apis/deleteAD.php";
+    private static final String url = "http://192.168.0.112/apis/agregarAD.php";
+    private static final String url2 = "http://192.168.0.112/apis/deleteAD.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
